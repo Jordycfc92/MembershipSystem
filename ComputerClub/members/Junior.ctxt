@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Junior
+comment0.text=\r\n\ Juniors\ are\ one\ of\ the\ levels\ of\ membership.\r\n\ Juniors\ have\ one\ additional\ attribute,\ an\ assigned\ officer\r\n
+comment1.params=firstName\ secondName\ contactNumber\ idNumber\ membershipLevel\ officer
+comment1.target=Junior(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ Officer)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Junior\r\n
+comment2.params=
+comment2.target=Officer\ getOfficer()
+comment2.text=\r\n\ Return\ the\ assigned\ officer\r\n
+comment3.params=newOfficer
+comment3.target=void\ setOfficer(Officer)
+numComments=4

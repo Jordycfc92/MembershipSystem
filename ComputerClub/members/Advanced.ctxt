@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Advanced
+comment0.text=\r\n\ Advanced\ members\ have\ an\ area\ of\ expertise\r\n
+comment1.params=firstName\ secondName\ contactNumber\ idNumber\ membershipLevel\ expertise
+comment1.target=Advanced(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Advanced\r\n
+comment2.params=
+comment2.target=java.lang.String\ getExpertise()
+comment2.text=\r\n\ return\ the\ Advanced\ members\ expertise\r\n\r\n
+comment3.params=newExpertise
+comment3.target=void\ setExpertise(java.lang.String)
+numComments=4
