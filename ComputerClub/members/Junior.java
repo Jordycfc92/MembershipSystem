@@ -13,11 +13,11 @@ public class Junior extends Beginner
     /**
      * Constructor for objects of class Junior
      */
-    public Junior(String firstName, String secondName, String contactNumber, int idNumber, String membershipLevel,
-    Officer officer)
+    public Junior(String firstName, String secondName, String contactNumber, String idNumber, String membershipLevel,
+    Officer officer, boolean paidSub)
     {
         // initialise instance variables
-        super(firstName, secondName, contactNumber, idNumber, membershipLevel);
+        super(firstName, secondName, contactNumber, idNumber, membershipLevel, paidSub);
         this.officer = officer;
     }
 

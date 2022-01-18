@@ -13,10 +13,10 @@ public class Officer extends Beginner
     /**
      * Constructor for objects of class Officer
      */
-    public Officer(String firstName, String secondName, String contactNumber, int idNumber, String membershipLevel,
-    String respobsibleFor)
+    public Officer(String firstName, String secondName, String contactNumber, String idNumber, String membershipLevel,
+    String respobsibleFor, boolean paidSub)
     {
-        super(firstName, secondName, contactNumber, idNumber, membershipLevel);
+        super(firstName, secondName, contactNumber, idNumber, membershipLevel, paidSub);
         this.responsibleFor = responsibleFor;
     }
 

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Beginner
 comment0.text=\r\n\ All\ members\ of\ the\ club\ would\ have\ to\ start\ as\ a\ beinner\ in\ some\ sense.\r\n\ It\ therefore\ seems\ prudent\ to\ have\ the\ beginner\ class\ as\ the\ parent\ class\r\n
-comment1.params=firstName\ secondName\ contactNumber\ idNumber\ subscriberLevel
-comment1.target=Beginner(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
+comment1.params=firstName\ secondName\ contactNumber\ idNumber\ subscriberLevel\ paidSub
+comment1.target=Beginner(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ boolean)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Beginner\r\n
 comment2.params=
 comment2.target=java.lang.String\ getName()

@@ -2,8 +2,8 @@ package members;
 
 
 /**
- * All members of the club would have to start as a beinner in some sense.
- * It therefore seems prudent to have the beginner class as the parent class
+ * All members of the club would have to start as a beginner in some sense.
+ * It therefore seems prudent to have the beginner class as the parent class to all members
  */
 public class Beginner
 {
@@ -11,19 +11,21 @@ public class Beginner
     protected String firstName;
     protected String secondName;
     protected String contactNumber; // not an integer, a string of digits representing an address
-    protected final int idNumber; // ID numbers are single use and not possible to change
+    protected String idNumber; // ID numbers are unique, not an integer,digits representing an address
     protected String subscriberLevel;
+    protected boolean paidSub;
 
     /**
      * Constructor for objects of class Beginner
      */
-    public Beginner(String firstName, String secondName, String contactNumber, int idNumber, String subscriberLevel)
+    public Beginner(String firstName, String secondName, String contactNumber, String idNumber, String subscriberLevel, boolean paidSub)
     {
         this.firstName = firstName;
         this.secondName = secondName;
         this.contactNumber = contactNumber;
         this.idNumber = idNumber;
         this.subscriberLevel = subscriberLevel;
+        this.paidSub = paidSub;
 
     }
 
@@ -59,7 +61,7 @@ public class Beginner
         }
     }
     
-    public int getIdNumber(){
+    public String getIdNumber(){
         return idNumber;
     }
     
