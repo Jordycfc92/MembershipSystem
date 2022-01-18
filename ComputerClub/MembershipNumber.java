@@ -7,7 +7,7 @@ import java.util.Random;
 public class MembershipNumber
 {
     // instance variables - replace the example below with your own
-    private List<Integer> memberNumbers;
+    public static List<Integer> memberNumbers;
     
 
     /**
@@ -15,21 +15,25 @@ public class MembershipNumber
      */
     public MembershipNumber()
     {
-        // initialise instance variables
-        
+        List<Integer> memberNumbers = new List<>();
     }
     
-    public String newMembershipNum(){
+    
+    public static String newMembershipNum(){
+        List<Integer> memberNumbers = new List<>();
         
-        Random rand = new Random();
-        int memNum = rand.nextInt (99999);
-        
-        while(memberNumbers.checkList(memNum)){
-            memNum = rand.nextInt (99999);
+        for (int i =0; i <25; i++){
+            Random rand = new Random();
+            int memNum = rand.nextInt (99999);
+            if (memberNumbers != null){
+                while(memberNumbers.checkList(memNum)){
+                memNum = rand.nextInt (99999);
+        } 
+        }
+            memberNumbers.join(memNum);
         }
         
-        memberNumbers.join(memNum); // add the membership number used simple linked list, no limit on members
-        
+
         String memNumFormatted = String.format("%05d", memNum);
         return memNumFormatted;        
     }

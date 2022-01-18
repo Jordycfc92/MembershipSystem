@@ -18,7 +18,8 @@ public class Beginner
     /**
      * Constructor for objects of class Beginner
      */
-    public Beginner(String firstName, String secondName, String contactNumber, String idNumber, String subscriberLevel, boolean paidSub)
+    public Beginner(String firstName, String secondName, String contactNumber, String idNumber,
+    String subscriberLevel, boolean paidSub)
     {
         this.firstName = firstName;
         this.secondName = secondName;

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MembershipNumber
+comment0.text=\r\n\ MembershipNumber\ is\ a\ class\ that\ is\ concerned\ with\ allocation\ of\ membership\ numbers\r\n\ It\ is\ imperative\ to\ have\ unique\ membership\ numbers\ for\ each\ member\r\n
+comment1.params=
+comment1.target=MembershipNumber()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MembershipNumber\r\n
+comment2.params=value
+comment2.target=void\ updateMemberNums(int)
+comment3.params=
+comment3.target=java.lang.String\ newMembershipNum()
+numComments=4
