@@ -46,6 +46,17 @@ public class ArrayMembers
 
         return array[index];
     }
+    
+    public void add(Beginner value){
+        if(currentSize >= maximumSize){
+            System.out.println("Error: array has reached maximum size");
+            return;
+        }
+        
+        
+        array[currentSize] = value;
+        currentSize++;
+    }
 
     public void insert (Beginner value, int index)throws ArrayIndexOutOfBoundsException {
         if(index<0 || index > currentSize || currentSize == maximumSize){
@@ -58,6 +69,16 @@ public class ArrayMembers
         array[index] = value;
         currentSize+=1;
     }
+    
+    public void removeWithId(int id){
+        for(int i = 0; i<currentSize-1; i++){
+            if(get(i).getIDNumber() == id){
+                delete(i);
+                return;
+            }
+        }
+        System.out.println("Error: ID not found");
+    }
 
     public void delete (int index){
         if(index<0 || index > currentSize){
@@ -65,7 +86,7 @@ public class ArrayMembers
             return;
         }
 
-        for (int i = index; i < currentSize; i++){
+        for (int i = index; i < currentSize-1; i++){
             array[i] = array[i+1];
         }
         currentSize-=1;
@@ -104,7 +125,7 @@ public class ArrayMembers
     public String produceReport(){
         String report;
         report ="";
-        for(int i =0; i<currentSize-1; i++){
+        for(int i =0; i<=currentSize-1; i++){
             report += (get(i).report());
             report += " \n";
         }

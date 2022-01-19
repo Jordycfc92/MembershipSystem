@@ -5,7 +5,7 @@ import members.*;
  */
 public class TestMemberCollection
 {
-    // instance variables - replace the example below with your own
+    
     public static ArrayMembers memberArray;
     /**
      * Constructor for objects of class TestMemberCollection
@@ -88,6 +88,29 @@ public class TestMemberCollection
     
     }
     
+    public static void taskFiveTest(){
+        ArrayMembers memberArray= new ArrayMembers(6, 0);
+        
+        Beginner member1 = new Beginner(1340,"Jordan", "McMillan", "0770100110", "junior", false);
+        Officer member2 = new Officer(1233,"Aaron", "McMillan", "0770100111",  "normal", false, "Purchasing officer");
+        Advanced member3 = new Advanced(3241,"Matty", "McMillan", "0770100112", "junior", true, "networks");
+        Beginner member4 = new Beginner(1200,"Elliott", "McMillan", "0770100114", "retired", true);
+        Officer member5 = new Officer(1010,"Peter", "Lane", "0770200111",  "normal", true, "head of club");
+        
+        System.out.println("Add members to task five test ArrayMembers structure");
+        memberArray.add(member1);
+        memberArray.add(member2);
+        memberArray.add(member3);
+        memberArray.add(member4);
+        memberArray.add(member5);
+        
+        System.out.println(memberArray.produceReport());
+        
+        System.out.println("Add members to task five test ArrayMembers structure");
+        memberArray.removeWithId(1233);
+        System.out.println(memberArray.produceReport());
+    }
+    
     public static void testEqualInts(int result, int expected){
         if (result ==expected){
             System.out.println("Pass");
@@ -107,6 +130,7 @@ public class TestMemberCollection
     public static void main(String[] args){
 
         testCollection();
+        taskFiveTest();
         
        
     }   
