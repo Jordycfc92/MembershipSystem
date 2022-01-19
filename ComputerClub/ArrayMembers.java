@@ -101,15 +101,19 @@ public class ArrayMembers
         }
     } 
 
-    public void produceReport(){
+    public String produceReport(){
+        String report;
+        report ="";
         for(int i =0; i<currentSize-1; i++){
-            System.out.println(get(i).report());
+            report += (get(i).report());
+            report += " \n";
         }
+        return report;
     }
     
-    public void produceSortedReport(){
+    public String produceSortedReport(){
         sortArrayMem();
-        produceReport();
+        return produceReport();
     }
 
 }

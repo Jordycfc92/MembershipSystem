@@ -6,7 +6,7 @@ import members.*;
 public class TestMemberCollection
 {
     // instance variables - replace the example below with your own
-    
+    public static ArrayMembers memberArray;
     /**
      * Constructor for objects of class TestMemberCollection
      */
@@ -16,11 +16,7 @@ public class TestMemberCollection
         
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     */
-    public static void testCollection(){
+    public static String testCollection(){
         ArrayMembers memberArray= new ArrayMembers(25, 21);
         
         Beginner member1 = new Beginner(1340,"Jordan", "McMillan", "0770100110", "junior", false);
@@ -45,6 +41,14 @@ public class TestMemberCollection
         Advanced member20 = new Advanced(5341,"Marie", "Curie", "0777100112", "normal", true, "networks");
         Beginner member21 = new Beginner(1980,"Gertrude", "Elion", "0787100110", "junior", false);
         
+        //Test sample of members package and all associated classes
+        System.out.println("Test the production of members");
+        testEqualStrings(member1.toString(), "1340 Beginner Jordan McMillan 0770100110 junior false");
+        testEqualStrings(member2.toString(), "1233 Officer Aaron McMillan 0770100111 normal false Purchasing officer");
+        testEqualStrings(member3.toString(), "3241 Advanced Matty McMillan 0770100112 junior true networks");
+        testEqualStrings(member4.toString(), "1205 Junior Ethan McMillan 0770100113 normal true Aaron McMillan");
+        testEqualStrings(member5.toString(), "1200 Beginner Elliott McMillan 0770100114 retired true");
+        
         memberArray.set(member1,0);
         memberArray.set(member2,1);
         memberArray.set(member3,2);
@@ -66,16 +70,44 @@ public class TestMemberCollection
         memberArray.set(member19,18);
         memberArray.set(member20,19);
         memberArray.set(member21,20);
-
-        memberArray.produceReport();
-        System.out.println("");
-        memberArray.produceSortedReport();
-
+        
+        
+        //show an unordered report
+        memberArray.produceReport();        
+        //show sorted report
+        String sortRep = memberArray.produceSortedReport();
+        System.out.println(sortRep);
+        
+        //test that report is ordered
+        System.out.println("Test order of sorted report");
+        int[] sortedIDOrder = {1010,1033,1191,1200,1205,1231,1233,1300,1340,1347,1356,1515,1645,1831,1874,1980,2241,3241,4441,5341};
+        for(int i = 0; i < memberArray.getCurrentSize()-1; i++){
+            testEqualInts(memberArray.get(i).getIDNumber(), sortedIDOrder[i]);  
+        }
+        return sortRep;
+    
     }
     
+    public static void testEqualInts(int result, int expected){
+        if (result ==expected){
+            System.out.println("Pass");
+        } else{
+            System.out.println("Error: result " + result + " does not equal expected " + expected);
+        }
+    }
+    
+    public static void testEqualStrings(String result, String expected){
+       if (result.equals(expected)){
+           System.out.println("Pass");
+       } else{
+           System.out.println("Error: result " + result + " does not equal expected " + expected);
+        }
+    }
+
     public static void main(String[] args){
 
         testCollection();
+        
        
     }   
 }
