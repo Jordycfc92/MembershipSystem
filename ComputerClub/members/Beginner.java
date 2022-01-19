@@ -8,19 +8,21 @@ package members;
 public class Beginner
 {
     // instance variables
+    protected String memberType;
     protected String firstName;
     protected String secondName;
     protected String contactNumber; // not an integer, a string of digits representing an address
-    protected String idNumber; // ID numbers are unique, not an integer,digits representing an address
+    protected int idNumber; // ID numbers are unique, not an integer,digits representing an address
     protected String subscriberLevel;
     protected boolean paidSub;
 
     /**
      * Constructor for objects of class Beginner
      */
-    public Beginner(String firstName, String secondName, String contactNumber, String idNumber,
+    public Beginner(int idNumber,String firstName, String secondName, String contactNumber, 
     String subscriberLevel, boolean paidSub)
     {
+        this.memberType = "Beginner";
         this.firstName = firstName;
         this.secondName = secondName;
         this.contactNumber = contactNumber;
@@ -62,12 +64,29 @@ public class Beginner
         }
     }
     
-    public String getIdNumber(){
+    public int getIDNumber(){
         return idNumber;
+    }
+    
+    public String idToString(){
+        String idStr = String.valueOf(idNumber);
+        return idStr;
     }
     
     public String getSubscriberLevel(){
         return subscriberLevel;
+    }
+    
+    public boolean getPaidSub(){
+        return paidSub;
+    }
+    
+    public String subsPaid(){
+        if(paidSub){
+            return "Yes";
+        } else{
+            return "No";
+        }
     }
     
     public void setSubscriberLevel(String newSubscriberLevel){
@@ -77,6 +96,16 @@ public class Beginner
         } else{
             this.subscriberLevel = newSubscriberLevel;
         }
+    }
+    
+    public String toString(){
+        return idToString() + " " + memberType + " " + firstName + " " + secondName + " " +
+        contactNumber + " " +  subscriberLevel + " " + paidSub;
+    }
+    
+    public String report(){
+        return idToString()  + " " + memberType  + " " + firstName + " " + secondName + " " +
+        subscriberLevel + " " + subsPaid(); 
     }
     
     

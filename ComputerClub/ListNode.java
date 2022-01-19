@@ -1,19 +1,19 @@
 
 public class ListNode <T>{
     private ListNode <T> next;
-    private T data;
+    private T value;
     
-    public ListNode(ListNode<T> next, T data){
+    public ListNode(ListNode<T> next, T value){
         this.next = next;
-        this.data = data;
+        this.value = value;
     }
 
     public ListNode<T> getNext(){
         return next; 
     }
 
-    public T getData(){
-        return data;
+    public T getValue(){
+        return value;
     }
 
     public String toString(){
@@ -22,9 +22,9 @@ public class ListNode <T>{
         result+="[";
         ListNode<T> current = this; 
         while(current != null){
-            result += current.data;
+            result += current.value;
             if (current.next!= null){
-                result+= ", ";
+                result+= ", \n ";
             }
             current = current.next; 
         }
@@ -37,7 +37,7 @@ public class ListNode <T>{
     }
 
 
-    public void join (T data) {
+    public void join (T value) {
         ListNode<T> current = this;
 
         // walk the list to find the last item
@@ -46,7 +46,7 @@ public class ListNode <T>{
         }
 
         // make a new node from data and place it in the lastItem
-        current.setNext (new ListNode<T> (null, data));              // <1>
+        current.setNext (new ListNode<T> (null, value));              // <1>
     }
 
     
@@ -56,7 +56,7 @@ public class ListNode <T>{
 
         while(current!=null){
             if(currentIndex == i){
-                return current.getData(); 
+                return current.getValue(); 
             }
             currentIndex+=1;
             current = current.getNext();
@@ -65,13 +65,13 @@ public class ListNode <T>{
         throw new ArrayIndexOutOfBoundsException(i);
     }
 
-    public void set (T data, int i){
+    public void set (T value, int i){
         ListNode<T> current = this;
         int currentIndex = 0;
 
         while(current!=null){
             if (currentIndex ==i){
-                current.data = data;
+                current.value = value;
                 return;
             }
             currentIndex += 1;
@@ -80,7 +80,7 @@ public class ListNode <T>{
         throw new ArrayIndexOutOfBoundsException (i);
     }
     
-    public ListNode insert (T data, int index){
+    public ListNode insert (T value, int index){
         ListNode<T> current = this;
         int currentIndex =0;
         
@@ -89,12 +89,12 @@ public class ListNode <T>{
         }
         
         if(index == 0){
-            return new ListNode(current, data);
+            return new ListNode(current, value);
         }
 
         while (current!= null){
             if(currentIndex+1 == index){
-                ListNode<T> insertedNode = new ListNode<T>(current.getNext(), data);
+                ListNode<T> insertedNode = new ListNode<T>(current.getNext(), value);
                 current.next = insertedNode;
                 return this; 
             }

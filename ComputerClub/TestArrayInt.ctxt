@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TestArrayInt
+comment1.params=result\ expected
+comment1.target=void\ testToString(java.lang.String,\ java.lang.String)
+comment2.params=result\ expected
+comment2.target=void\ testGet(int,\ int)
+numComments=3

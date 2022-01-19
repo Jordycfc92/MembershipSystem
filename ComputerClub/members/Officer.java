@@ -13,11 +13,12 @@ public class Officer extends Beginner
     /**
      * Constructor for objects of class Officer
      */
-    public Officer(String firstName, String secondName, String contactNumber, String idNumber, String membershipLevel,
-    String respobsibleFor, boolean paidSub)
+    public Officer(int idNumber,String firstName, String secondName, String contactNumber, String membershipLevel,
+    boolean paidSub, String responsibleFor )
     {
-        super(firstName, secondName, contactNumber, idNumber, membershipLevel, paidSub);
+        super(idNumber,firstName, secondName, contactNumber,  membershipLevel, paidSub);
         this.responsibleFor = responsibleFor;
+        this.memberType = "Officer";
     }
 
     /**
@@ -31,10 +32,15 @@ public class Officer extends Beginner
     
     public void setResponsibleFor(String newResponsibleFor){
         if(!newResponsibleFor.equalsIgnoreCase("head of club") || !newResponsibleFor.equalsIgnoreCase("Publicity officer")
-        ||!newResponsibleFor.equalsIgnoreCase("Purchasing officer") || !newResponsibleFor.equalsIgnoreCase("Fincance officer")){
+        ||!newResponsibleFor.equalsIgnoreCase("Purchasing officer") || !newResponsibleFor.equalsIgnoreCase("Finance officer")){
             System.out.println("Responsibilty no recognised");
         }else{
             this.responsibleFor = newResponsibleFor;
         }
+    }
+    
+    public String toString(){
+       String parentString = super.toString();
+       return parentString + " " + responsibleFor;
     }
 }

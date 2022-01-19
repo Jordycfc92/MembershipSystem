@@ -12,12 +12,13 @@ public class Advanced extends Beginner
     /**
      * Constructor for objects of class Advanced
      */
-    public Advanced(String firstName, String secondName, String contactNumber, String idNumber, String membershipLevel,
-    String expertise, boolean paidSub)
+    public Advanced(int idNumber, String firstName, String secondName, String contactNumber, String membershipLevel,
+    boolean paidSub, String expertise)
     {
         // initialise instance variables
-        super(firstName, secondName, contactNumber, idNumber, membershipLevel, paidSub);
+        super(idNumber, firstName, secondName, contactNumber, membershipLevel, paidSub);
         this.expertise = expertise;
+        this.memberType = "Advanced";
     }
 
     /**
@@ -32,5 +33,10 @@ public class Advanced extends Beginner
     
     public void setExpertise(String newExpertise){
         this.expertise = newExpertise;
+    }
+    
+    public String toString(){
+       String parentString = super.toString();
+       return parentString + " " + expertise;
     }
 }

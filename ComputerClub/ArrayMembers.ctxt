@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=ArrayMembers
+comment1.params=maximumSize\ currentSize
+comment1.target=ArrayMembers(int,\ int)
+comment10.params=arr1\ top
+comment10.target=void\ doInsert(members.Beginner[],\ int)
+comment11.params=
+comment11.target=void\ produceReport()
+comment12.params=
+comment12.target=void\ produceSortedReport()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=
+comment3.target=int\ getCurrentSize()
+comment4.params=value\ index
+comment4.target=void\ set(members.Beginner,\ int)
+comment5.params=index
+comment5.target=members.Beginner\ get(int)
+comment6.params=value\ index
+comment6.target=void\ insert(members.Beginner,\ int)
+comment7.params=index
+comment7.target=void\ delete(int)
+comment8.params=
+comment8.target=void\ sortArrayMem()
+comment9.params=arr\ i1\ i2
+comment9.target=void\ swap(members.Beginner[],\ int,\ int)
+numComments=13
